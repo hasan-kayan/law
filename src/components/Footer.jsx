@@ -18,10 +18,16 @@ export default function Footer() {
           <h3 className="footerHeading">İletişim Bilgileri</h3>
           <address className="footerAddress">
             <p>
-              E-posta: <a href="mailto:umit@gmail.com">umit@gmail.com</a>
+              E-posta: <a href="mailto:umit@gmail.com">umitsciftci@gmail.com</a>
             </p>
             <p>
-              Telefon: <a href="tel:+905062316028">+90 506 231 60 28</a>
+              Telefon: <a href="tel:+905062316028">+90 545 792 6215</a>
+            </p>
+            <p>
+              Telefon: <a href="tel:+0248 234 15 88">0248 234 15 88</a>
+            </p>
+            <p>
+              Adres: <a href="adres:Konak Mah. Adliye Cad. 4 Burdur Merkez, Burdur">Konak Mah. Adliye Cad. 4 Burdur Merkez, Burdur</a>
             </p>
             {/* <p>
               LinkedIn:{" "}
