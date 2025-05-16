@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import "./../../../css/components/header/menu/MenuExp.css";
 
 const lawLinks = [
-  { label: "Prawo Cywilne", path: "/prawo-cywilne" },
-  { label: "Prawo Rodzinne", path: "/prawo-rodzinne" },
-  { label: "Prawo Gospodarcze", path: "/prawo-gospodarcze" },
-  { label: "Prawo Pracy", path: "/prawo-pracy" },
-  { label: "Prawo Nieruchomości", path: "/prawo-nieruchomosci" },
-  { label: "Prawo Ochrony Danych Osobowych", path: "/prawo-danych" },
+  { label: "Medeni Hukuk", path: "/medeni-hukuk" },
+  { label: "Aile Hukuku", path: "/aile-hukuku" },
+  { label: "Ticaret Hukuku", path: "/ticaret-hukuku" },
+  { label: "İş Hukuku", path: "/is-hukuku" },
+  { label: "Gayrimenkul Hukuku", path: "/gayrimenkul-hukuku" },
+  { label: "Kişisel Verilerin Korunması Hukuku", path: "/kvkk-hukuku" },
 ];
 
 export default function MenuExp() {
@@ -16,7 +16,7 @@ export default function MenuExp() {
       <ul
         className="submenuList"
         role="menu"
-        aria-label="Podmenu dziedzin prawa"
+        aria-label="Hukuk alanları alt menüsü"
       >
         {lawLinks.map(({ label, path }) => (
           <li key={path} className="submenuItem" role="none">
@@ -26,7 +26,7 @@ export default function MenuExp() {
               className="submenuLink"
               role="menuitem"
               tabIndex={0}
-              aria-label={`Przejdź do strony ${label}`}
+              aria-label={`${label} sayfasına git`}
             >
               {label}
             </Link>

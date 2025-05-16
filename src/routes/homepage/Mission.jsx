@@ -14,7 +14,6 @@ export default function Mission() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: false, amount: 0.2 }}
-        onViewportEnter={() => console.log("Animation triggered!")}
       >
         <h2 id="mission-heading" className="missionTitle subheading">
           Müvekkillerimizin <br />

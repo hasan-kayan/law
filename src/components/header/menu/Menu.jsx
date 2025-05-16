@@ -6,15 +6,15 @@ import CloseIcon from "./../../../assets/icons/closeIcon.svg";
 import "./../../../css/components/header/menu/Menu.css";
 
 const menuItems = [
-  { label: "Strona Główna", id: "home"},
-  { label: "Misja", id: "mission" },
+  { label: "Ana Sayfa", id: "home" },
+  { label: "Misyonumuz", id: "mission" },
   {
-    label: "expertise",
+    label: "Uzmanlık Alanlarımız",
     id: "expertise",
     expandable: true,
   },
-  { label: "O mnie", id: "about" },
-  { label: "Kontakt", id: "contact" },
+  { label: "Hakkımızda", id: "about" },
+  { label: "İletişim", id: "contact" },
 ];
 
 export default function Menu({ onClose }) {
@@ -60,14 +60,14 @@ export default function Menu({ onClose }) {
       <nav
         className={`sideMenu ${animation ? "closing" : ""}`}
         ref={menuRef}
-        aria-label="Główne menu nawigacyjne"
+        aria-label="Çiftçi Hukuk Bürosu Navigasyon Menüsü"
       >
         <button
           className="closeMenuBtn"
           onClick={onCloseAll}
-          aria-label="Zamknij menu"
+          aria-label="Menüyü Kapat"
         >
-          <img src={CloseIcon} alt="Ikona zamknięcia menu" />
+          <img src={CloseIcon} alt="Menüyü kapat simgesi" />
         </button>
 
         <ul className="sideMenuList">
@@ -86,7 +86,7 @@ export default function Menu({ onClose }) {
                     className="sideMenuLink"
                     onClick={() => handleClick(item)}
                     aria-expanded={item.expandable ? showExp : undefined}
-                    aria-controls={item.expandable ? "submenu" : undefined}
+                    aria-controls={item.expandable ? "altMenu" : undefined}
                   >
                     {item.label}
                   </button>
@@ -95,20 +95,20 @@ export default function Menu({ onClose }) {
                     <button
                       className="toggleSubmenuBtn"
                       onClick={() => setShowExp(!showExp)}
-                      aria-label={showExp ? "Zwiń podmenu" : "Rozwiń podmenu"}
+                      aria-label={showExp ? "Alt menüyü gizle" : "Alt menüyü göster"}
                       aria-expanded={showExp}
-                      aria-controls="submenu"
+                      aria-controls="altMenu"
                     >
                       <img
                         src={showExp ? ArrowUpIcon : ArrowDownIcon}
-                        alt={showExp ? "Strzałka w górę" : "Strzałka w dół"}
+                        alt={showExp ? "Yukarı ok simgesi" : "Aşağı ok simgesi"}
                       />
                     </button>
                   )}
                 </div>
 
                 {item.expandable && showExp && (
-                  <MenuExp onClose={() => setShowExp(false)} id="submenu" />
+                  <MenuExp onClose={() => setShowExp(false)} id="altMenu" />
                 )}
               </li>
             );
@@ -116,7 +116,7 @@ export default function Menu({ onClose }) {
         </ul>
       </nav>
 
-      <div className={`menuBackdrop ${animation ? "closing" : ""}`} />
+      <div className={`menuBackdrop ${animation ? "closing" : ""}`} aria-hidden="true" />
     </>
   );
 }

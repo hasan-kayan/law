@@ -6,7 +6,7 @@ export default function HamburgerMenu({ onToggle, showMenu }) {
       <button
         className="hamburgerMenu"
         onClick={onToggle}
-        aria-label={showMenu ? "Zamknij menu" : "Otwórz menu"}
+        aria-label={showMenu ? "Zamknij " : "Otwórz menu"}
         aria-expanded={showMenu}
         aria-controls="menu"
         type="button"

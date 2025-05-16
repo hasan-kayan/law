@@ -11,11 +11,6 @@ export default function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3300);
-    console.log.apply(console, [
-      "%c Designed and Coded by Laura Głąb",
-      "color: white" +
-        "; background: padding:5px 0; border-radius: 5px; font-weight: bold; background-color: #897455;",
-    ]);
 
     return () => clearTimeout(timer);
   }, []);
@@ -26,95 +21,90 @@ export default function App() {
 
   const pages = [
     {
-      path: "/prawo-cywilne",
-      title: "Prawo Cywilne",
+      path: "/medeni-hukuk",
+      title: "Medeni Hukuk",
       description:
-        "W mojej kancelarii zajmuję się kompleksową obsługą spraw z zakresu prawa cywilnego, w tym sporządzaniem i analizą umów, dochodzeniem roszczeń oraz reprezentacją klientów w postępowaniach sądowych. Pomagam w rozwiązywaniu sporów dotyczących zobowiązań, odszkodowań oraz ochrony dóbr osobistych. Moim celem jest zapewnienie skutecznej ochrony praw klientów oraz wsparcie w negocjacjach i mediacjach.",
-      subTitle: "Moja pomoc w zakresie prawa cywilnego obejmuje:",
+        "Kapsamlı medeni hukuk hizmetleri sunuyoruz: sözleşme hazırlığı, dava takibi, tazminat talepleri ve mülkiyet anlaşmazlıklarında temsil hizmeti vermekteyiz.",
+      subTitle: "Medeni hukuk kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "sporządzanie i opiniowanie umów cywilnoprawnych,",
-        "doradztwo w sprawach dotyczących praw własności oraz zobowiązań,",
-        "prowadzenie spraw sądowych związanych z dochodzeniem roszczeń cywilnych,",
-        "reprezentację klientów w sprawach o odszkodowania i zadośćuczynienia,",
-        "pomoc w sprawach spadkowych,podziału majątku oraz ustalania praw do nieruchomości,",
-        "mediacje i negocjacje mające na celu polubowne rozwiązywanie sporów.",
+        "Sözleşmelerin hazırlanması ve incelenmesi",
+        "Mülkiyet ve borç ilişkileri konularında danışmanlık",
+        "Tazminat ve manevi zarar davalarının yürütülmesi",
+        "Miras davaları, mal paylaşımı ve tapu uyuşmazlıkları",
+        "Arabuluculuk ve uzlaşma desteği",
       ],
     },
     {
-      path: "/prawo-rodzinne",
-      title: "Prawo Rodzinne",
+      path: "/aile-hukuku",
+      title: "Aile Hukuku",
       description:
-        "W mojej kancelarii prowadzę sprawy o rozwód, separację oraz podział majątku, dbając o interesy moich klientów na każdym etapie postępowania. Udzielam wsparcia w sprawach dotyczących władzy rodzicielskiej, ustalania kontaktów z dziećmi oraz alimentów. Dodatkowo, pomagam w rozwiązywaniu sporów związanych z ustaleniem lub zaprzeczeniem ojcostwa oraz reprezentuję klientów w procesach adopcyjnych.",
-      subTitle: "Moja pomoc w zakresie prawa rodzinnego obejmuje:",
+        "Boşanma, velayet, nafaka ve evlat edinme davalarında müvekkillerimize destek sağlıyoruz. Ailevi konularda haklarınızı korumak için yanınızdayız.",
+      subTitle: "Aile hukuku kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "prowadzenie spraw o rozwód, separację oraz podział majątku,",
-        "doradztwo i reprezentację w sprawach dotyczących władzy rodzicielskiej oraz ustalania kontaktów z dziećmi,",
-        "pomoc w sprawach alimentacyjnych, w tym dochodzenie i egzekwowanie alimentów,",
-        "reprezentację klientów w sprawach o odszkodowania i zadośćuczynienia,",
-        "rozwiązywanie spraw związanych z ustaleniem lub zaprzeczeniem ojcostwa,",
-        "wsparcie w procesach adopcyjnych oraz pieczy zastępczej,",
-        "mediacje rodzinne mające na celu polubowne rozwiązywanie konfliktów.",
+        "Boşanma, mal paylaşımı ve velayet davaları",
+        "Çocuklarla kişisel ilişki kurulması ve düzenlenmesi",
+        "Nafaka talepleri ve icrası",
+        "Babalık davaları ve soybağı uyuşmazlıkları",
+        "Evlat edinme ve koruyucu aile süreçlerinde danışmanlık",
+        "Aile içi arabuluculuk hizmetleri",
       ],
     },
     {
-      path: "/prawo-gospodarcze",
-      title: "Prawo Gospopdarcze",
+      path: "/ticaret-hukuku",
+      title: "Ticaret Hukuku",
       description:
-        "W mojej kancelarii zajmuję się doradztwem przy zakładaniu, przekształcaniu oraz likwidacji spółek, a także przygotowuję umowy handlowe dostosowane do potrzeb klientów. Reprezentuję przedsiębiorców w sporach gospodarczych przed sądami oraz w negocjacjach z partnerami biznesowymi. Ponadto, wspieram klientów w sprawach dotyczących odpowiedzialności członków zarządu i ochrony tajemnicy przedsiębiorstwa.",
-      subTitle: "Moja pomoc w zakresie prawa gospodarczego obejmuje:",
+        "Şirket kuruluşu, sözleşme hazırlığı ve ticari uyuşmazlıkların çözümünde iş dünyasına hukuki destek sağlıyoruz.",
+      subTitle: "Ticaret hukuku kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "doradztwo przy zakładaniu, przekształcaniu oraz likwidacji spółek i innych form działalności gospodarczej,",
-        "sporządzanie i opiniowanie umów handlowych, w tym kontraktów z partnerami biznesowymi,",
-        "reprezentację w sporach gospodarczych przed sądami i arbitrażem,",
-        "wsparcie w negocjacjach i mediacjach dotyczących sporów biznesowych,",
-        "pomoc w sprawach dotyczących odpowiedzialności członków zarządu i organów spółek,",
-        "doradztwo w zakresie prawa konkurencji, ochrony tajemnicy przedsiębiorstwa oraz zwalczania nieuczciwej konkurencji.",
+        "Şirket kurulumu, dönüşümü ve tasfiyesi işlemleri",
+        "Ticari sözleşmelerin hazırlanması ve yorumlanması",
+        "Ticari davalarda ve tahkimde temsil",
+        "İş ortaklıklarında müzakerelere hukuki destek",
+        "Yönetim kurulu sorumlulukları ve şirket içi düzenlemeler",
+        "Rekabet hukuku ve ticari sırların korunması",
       ],
     },
     {
-      path: "/prawo-danych",
-      title: "Prawo Ochrony Danych Osobowych",
+      path: "/kvkk-hukuku",
+      title: "Kişisel Verilerin Korunması Hukuku",
       description:
-        "W mojej kancelarii zajmuję się doradztwem w zakresie zgodności z przepisami RODO oraz krajowymi regulacjami dotyczącymi ochrony danych osobowych. Pomagam klientom w przygotowywaniu i wdrażaniu polityk ochrony danych oraz przeprowadzam audyty, aby ocenić ryzyko związane z przetwarzaniem danych. Reprezentuję również klientów w postępowaniach przed organami nadzoru, w tym przed Prezesem Urzędu Ochrony Danych Osobowych.",
-      subTitle:
-        "Moja pomoc w zakresie prawa ochrony danych osobowych obejmuje:",
+        "KVKK ve GDPR kapsamında danışmanlık hizmetleri sunuyoruz. Politika oluşturma, risk denetimi ve idari süreçlerde yanınızdayız.",
+      subTitle: "KVKK kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "doradztwo w zakresie zgodności z przepisami RODO oraz krajowymi regulacjami dotyczącymi ochrony danych osobowych,",
-        "przygotowywanie i wdrażanie polityk ochrony danych osobowych, procedur oraz klauzul informacyjnych,",
-        "prowadzenie audytów wewnętrznych i oceny ryzyka związanego z przetwarzaniem danych,",
-        "reprezentację przed organami nadzoru, w tym przed Prezesem Urzędu Ochrony Danych Osobowych (UODO),",
-        "wsparcie w procesach zgłaszania naruszeń ochrony danych osobowych oraz zarządzania incydentami,",
-        "szkolenia dla pracowników i kadry zarządzającej w zakresie ochrony danych osobowych.",
+        "KVKK ve GDPR uyumluluk danışmanlığı",
+        "Veri koruma politikalarının hazırlanması",
+        "İç denetim ve risk değerlendirmesi",
+        "KVKK ihlallerinde süreç yönetimi ve savunma",
+        "Veri sorumluları için eğitim ve bilinçlendirme faaliyetleri",
       ],
     },
     {
-      path: "/prawo-pracy",
-      title: "Prawo Pracy",
+      path: "/is-hukuku",
+      title: "İş Hukuku",
       description:
-        "W mojej kancelarii zajmuję się doradztwem w sprawach dotyczących nawiązywania i rozwiązywania umów o pracę, w tym sporami o niezgodne z prawem zwolnienia. Reprezentuję klientów w postępowaniach dotyczących mobbingu, dyskryminacji oraz innych naruszeń praw pracowniczych. Dodatkowo, przygotowuję i opiniuję regulaminy pracy oraz wspieram przedsiębiorców w kwestiach związanych z reorganizacją zakładów pracy i zwolnieniami grupowymi.",
-      subTitle: "Moja pomoc w zakresie prawa pracy obejmuje:",
+        "İş sözleşmeleri, fesih süreçleri, mobbing ve ayrımcılık davalarında hem işverenlere hem de çalışanlara destek sağlıyoruz.",
+      subTitle: "İş hukuku kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "doradztwo w sprawach dotyczących nawiązywania, zmiany i rozwiązywania umów o pracę,",
-        "reprezentację w sporach pracowniczych, w tym w sprawach o przywrócenie do pracy i odszkodowania,",
-        "pomoc w sporach dotyczących mobbingu, dyskryminacji oraz innych naruszeń praw pracowniczych,",
-        "sporządzanie oraz opiniowanie regulaminów pracy, wynagrodzeń i innych dokumentów wewnętrznych,",
-        "wsparcie w sprawach związanych z czasem pracy, wynagrodzeniem oraz urlopami,",
-        "mediacje i negocjacje mające na celu polubowne rozwiązywanie sporów.",
+        "İşe alım, işten çıkarma ve sözleşme düzenlemeleri",
+        "İşe iade ve kıdem tazminatı davaları",
+        "Mobbing ve ayrımcılık konularında dava ve danışmanlık",
+        "İşyeri yönetmelikleri ve ücret politikaları",
+        "Çalışma saatleri, izinler ve maaş uyuşmazlıkları",
+        "İş uyuşmazlıklarında arabuluculuk hizmeti",
       ],
     },
     {
-      path: "/prawo-nieruchomosci",
-      title: "Prawo Nieruchomości",
+      path: "/gayrimenkul-hukuku",
+      title: "Gayrimenkul Hukuku",
       description:
-        "W mojej kancelarii zajmuję się doradztwem prawnym przy transakcjach dotyczących zakupu, sprzedaży oraz najmu nieruchomości, dbając o zgodność z przepisami prawa. Reprezentuję klientów w sporach dotyczących prawa własności, zasiedzenia oraz zniesienia współwłasności. Dodatkowo, pomagam w sprawach związanych z użytkowaniem wieczystym, służebnościami oraz roszczeniami wynikającymi z naruszenia prawa do nieruchomości.",
-      subTitle: "Moja pomoc w zakresie prawa nieruchomości obejmuje:",
+        "Tapu, kiralama, mülkiyet davaları, inşaat hukuku ve taşınmaz yatırımları konusunda hukuki çözümler sunuyoruz.",
+      subTitle: "Gayrimenkul hukuku kapsamında sunduğumuz hizmetler:",
       ulSubpage: [
-        "doradztwo prawne przy zakupie, sprzedaży oraz najmie nieruchomości,",
-        "sporządzanie i opiniowanie umów deweloperskich, sprzedaży oraz najmu,",
-        "pomoc w sprawach dotyczących użytkowania wieczystego, służebności oraz hipotek,",
-        "reprezentację w sprawach związanych z prawem własności, zasiedzeniem oraz zniesieniem współwłasności,",
-        "wsparcie w postępowaniach dotyczących roszczeń o naruszenie posiadania lub prawa do nieruchomości,",
-        "prowadzenie spraw związanych z inwestycjami budowlanymi oraz zagospodarowaniem przestrzennym.",
+        "Gayrimenkul alım-satım ve kira sözleşmeleri",
+        "Tapu işlemleri ve ipotek konuları",
+        "Zilyetlik, ortaklık ve mülkiyet davaları",
+        "İnşaat projelerinde hukuki danışmanlık",
+        "İmar planı uyuşmazlıkları ve belediye işlemleri",
       ],
     },
   ];
@@ -140,7 +130,7 @@ export default function App() {
           ))}
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );
