@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,6 +13,8 @@ const userSchema = z.object({
 });
 
 export default function Contact() {
+  const formRef = useRef(null);
+
   const {
     register,
     handleSubmit,
@@ -22,12 +24,16 @@ export default function Contact() {
     resolver: zodResolver(userSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     emailjs
-      .sendForm("service_wdcomuz", "template_wwlr8mk", data, "7qkJteyD1v-6jOfq4")
-      .then((result) => console.log(result.text))
-      .catch((error) => console.log(error.text));
-    reset();
+      .sendForm("service_124amh3", "template_wvdunw7", formRef.current, "mOv_06zT4hqmBeZyl")
+      .then((result) => {
+        console.log("Mesaj gönderildi:", result.text);
+        reset();
+      })
+      .catch((error) => {
+        console.log("Mesaj gönderilemedi:", error.text);
+      });
   };
 
   return (
@@ -72,12 +78,14 @@ export default function Contact() {
           className="input__section"
         >
           <form
+            ref={formRef}
             className="inputFields"
             onSubmit={handleSubmit(onSubmit)}
             aria-describedby="form-description"
           >
             <input
               id="name"
+              name="name"
               className="inputField"
               {...register("name")}
               placeholder="Adınız *"
@@ -94,6 +102,7 @@ export default function Contact() {
 
             <input
               id="email"
+              name="email"
               className="inputField"
               {...register("email")}
               placeholder="E-posta adresiniz *"
@@ -110,6 +119,7 @@ export default function Contact() {
 
             <textarea
               id="message"
+              name="message"
               className="inputField"
               {...register("message")}
               placeholder="Mesajınız *"

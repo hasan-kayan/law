@@ -9,7 +9,7 @@ const menuItems = [
   { label: "Strona Główna", id: "home"},
   { label: "Misja", id: "mission" },
   {
-    label: "Czym się zajmuję?",
+    label: "expertise",
     id: "expertise",
     expandable: true,
   },

@@ -20,8 +20,7 @@ export default function About() {
         viewport={{ once: true, amount: 0.2 }}
         className="aboutText__section"
       >
-        <p className="lawyerAbout">Hukuk Bürosu</p>
-        <h2 className="h2About">Çiftçi Hukuk Bürosu</h2>
+        <h2 className="h2About">ÇİFTÇİ Hukuk Bürosu</h2>
         <p className="aboutText">
           Çiftçi Hukuk Bürosu, iş hukuku başta olmak üzere, işçi hakları, toplu
           iş sözleşmeleri ve sendikal faaliyetler konusunda uzmanlaşmış bir hukuk
@@ -30,7 +29,7 @@ export default function About() {
           çözümler üretmeyi amaçlıyoruz.
         </p>
         <hr className="hrElement" />
-        <h4 className="educationTitle">Deneyim ve Faaliyet Alanları</h4>
+        <h4 className="educationTitle">DENEYİM VE FAALİYETLER</h4>
         <p className="educationAbout">
           Uzman kadromuz, Devrimci İşçi Sendikaları Konfederasyonu (DİSK)
           bünyesindeki birçok iş kolunda aktif hukuki danışmanlık görevini
@@ -39,7 +38,7 @@ export default function About() {
           gerçekleştirilmiştir. Dava takiplerinden önleyici hukuk hizmetlerine
           kadar geniş bir yelpazede faaliyet gösteriyoruz.
         </p>
-        <h4 className="educationTitle">Kurumsal Kimlik</h4>
+        <h4 className="educationTitle">Kurumsal KİMLİK</h4>
         <p className="educationAbout">
           Büro, Burdur Barosu eski başkanı ve saygın hukukçu Yusuf Çiftçi
           tarafından kurulmuştur. Temelleri etik değerlere, toplumsal duyarlılığa
